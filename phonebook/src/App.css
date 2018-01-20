@@ -1,0 +1,101 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.title,
+.choose {
+  color:white;
+}
+
+/* Searchbar css */
+
+.searchbar {
+  float:left;
+  width:600px;
+  padding:10px 5px;
+  background-color: #c5c5cc;
+  outline: none;
+  border-radius: 5px;
+  border:none;
+  margin:10px;
+}
+
+.searchbar::placeholder{
+  color:rgb(77, 72, 72);
+  font-weight:600;
+}
+
+/* Phonelist CSS */
+
+.phonelist{
+  display:block;
+  float:left;
+  width:100%;
+  height:400px;
+  overflow-y: scroll;
+  border-top:3px solid rgba(255, 252, 252, 0.5);
+  border-bottom:3px solid rgba(255, 252, 252, 0.5);
+}
+
+.phonelist::-webkit-scrollbar {
+  width: 12px;
+}
+
+.phonelist::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(157, 93, 241, 0.3); 
+  border-radius: 10px;
+}
+
+.phonelist::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
+
+.contact {
+  display:block;
+  float:left;
+  width:31.3333%;
+  margin:1%;
+  height:auto;
+  padding:30px 0;
+  background-color:#9b59b6;
+  border-radius: 5px;
+}
+
+.contact h3,
+.contact p{
+  color:white;
+}
+
+.contact h3{
+  font-size:16px;
+}
+
+.contact p {
+  font-size:12px;
+}
