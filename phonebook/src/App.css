@@ -34,7 +34,8 @@
 
 /* Searchbar css */
 
-.searchbar {
+.searchbar,
+.sorter {
   float:left;
   width:600px;
   padding:10px 5px;

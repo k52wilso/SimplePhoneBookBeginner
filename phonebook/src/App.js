@@ -3,7 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import PhoneList from './PhoneList';
 import SearchBar from './SearchBar';
-import update from 'immutability-helper';
+import Sorter from './Sorter';
+
 
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
     super();
     this.displayed = this.displayed.bind(this);
     this.showContact = this.showContact.bind(this);
+    this.sorter = this.sorter.bind(this);
   }
 
   state = {
@@ -34,6 +36,29 @@ class App extends Component {
        return contact;
     })
     this.setState({contacts});
+}
+
+//Function to sort based on select 
+sorter(){
+  let contacts = this.state.contacts;
+  let value = document.querySelector('select').value;
+  if(value == 'asc'){
+    contacts = contacts.sort((a,b) => {
+      if(a.name < b.name) return -1;
+      if(a.name > b.name) return 1;
+      return 0;
+    });
+  }else{
+    contacts = contacts.sort((a,b) => {
+      if(a.name > b.name) return -1;
+      if(a.name < b.name) return 1;
+      return 0;
+    });
+  }
+
+  //Update state after sorting
+  this.setState({contacts});
+
 }
 
 // Function to see how many contacts are being displayed
@@ -66,6 +91,7 @@ showContact(){
         <h1 className="title">PhoneBook</h1>
         <p className="choose">Please find a contact (Displaying {this.displayed()} of {this.state.contacts.length} )</p>
         <SearchBar show={this.showContact} />
+        <Sorter sort={this.sorter} />
         {/* Filters */}
 
         {/* Phone book component */}
