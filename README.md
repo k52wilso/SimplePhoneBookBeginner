@@ -8,3 +8,4 @@ Single Page Application for Phonebook (Beginner Level)
 cd phonebook
 npm start
 ```
+### Now you should be able to view the project in a browser of your choosing at http://localhost:3000 
